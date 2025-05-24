@@ -1,8 +1,10 @@
 package com.devsuperior.dslist.service;
 
 import com.devsuperior.dslist.dto.GameDTO;
+import com.devsuperior.dslist.dto.GameListDTO;
 import com.devsuperior.dslist.dto.GameMinDTO;
 import com.devsuperior.dslist.entities.Game;
+import com.devsuperior.dslist.entities.GameList;
 import com.devsuperior.dslist.repository.GameRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,4 +30,6 @@ public class GameService {
         List<Game> result = gameRepository.findAll();
         return result.stream().map(x -> new GameMinDTO(x)).toList();
     }
+
+
 }
